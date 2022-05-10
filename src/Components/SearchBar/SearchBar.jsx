@@ -4,20 +4,18 @@ const SearchBar = (props) => {
     
     const [term, setTerm] = useState(' ')
 
-    function HandleSubmit(event){
+    function handleSubmit(event){
         event.preventDefault();
-        let searchedTerm = {
-            term: term, 
-        };
-        console.log(searchedTerm)
+        console.log(term)
+        props.searching(term)
         
     }
 
     return ( 
-        <form>
+        <form onSubmit={handleSubmit}>
             <div>
-                <input type="text" value={term} />
-                <button>Search</button>
+                <input type="text" value={term} onChange={(event) => setTerm(event.target.value)}/>
+                <button type='submit'>Search</button>
             </div>
         </form>
      );
