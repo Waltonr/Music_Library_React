@@ -1,7 +1,7 @@
 import React from "react";
 
 const DisplayMusic = (props) => {
-    const {allSongs} = props.getAllSongsProperty();
+
     return ( 
         <table>
             <thead>
@@ -14,13 +14,13 @@ const DisplayMusic = (props) => {
                 </tr>
             </thead>
             <tbody>
-                {props.allSongs.map((song, index) => {
+                {props.getAllSongsProperty.map((song, index) => {
                     return (
                         <tr key={index}>
                             <td>{song.title}</td>
                             <td>{song.artist}</td>
                             <td>{song.album}</td>
-                            <td>{song.gene}</td>
+                            <td>{song.genre}</td>
                             <td>{song.release_date}</td>
                         </tr>
                     )

@@ -11,15 +11,18 @@ function App() {
   }, [])
 
   async function getAllSongs(){
-
-    let response = await axios.get('http://127.0.0.1:8000/music/');
-    allSongs(response.data)
+    try{
+      let response = await axios.get('http://127.0.0.1:8000/music/');
+      allSongs(response.data)
+    } catch (error) {
+      console.log('Error in MakeGet Request')
+    }
   }
 
 
   return (
     <div>
-      <h2>Hello</h2>
+      <h1>Music Library</h1>
       <DisplayMusic getAllSongsProperty={songs} />
       <AddNewSongForm />
     </div>
