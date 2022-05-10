@@ -19,6 +19,7 @@ function App() {
       console.log('Error in MakeGet Request')
     }
   }
+
   function searchTerm(term){
     if (songs.includes({term}) === true) {
       console.log(songs.term)
@@ -28,12 +29,17 @@ function App() {
 
   }
 
+  function addNewSong(entry){
+    let tempSongs = [entry, ...songs];
+    setSongs(tempSongs)
+  }
+
   return (
     <div>
       <h1>Music Library</h1>
       <SearchBar searching={searchTerm} />
       <DisplayMusic allTheSongs={songs} />
-      <AddNewSongForm  />
+      <AddNewSongForm addNewSongProperty={addNewSong} />
     </div>
   );
 }

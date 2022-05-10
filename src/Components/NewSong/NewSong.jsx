@@ -17,33 +17,34 @@ const AddNewSongForm = (props) => {
             release_date: release_date
         };
         console.log(newSong)
-        props.addNewPostProperty(newSong)
+        props.addNewSongProperty(newSong)
 
     }
 
     return ( 
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>Add a Song</h2>
             <div>
                 <label>Title</label>
-                <input type="text" value={title}/>
+                <input type="text" value={title} onChange={(event) => setTitle(event.target.value)}/>
             </div>
             <div>
                 <label>Artist</label>
-                <input type="text" value={artist}/>
+                <input type="text" value={artist} onChange={(event) => setArtist(event.target.value)}/>
             </div>
             <div>
                 <label>Album</label>
-                <input type="text" value={album}/>
+                <input type="text" value={album} onChange={(event) => setAlbum(event.target.value)}/>
             </div>
             <div>
                 <label>Genre</label>
-                <input type="text" value={genre}/>
+                <input type="text" value={genre} onChange={(event) => setGenre(event.target.value)}/>
             </div>
             <div>
                 <label>Release Date</label>
-                <input type="text" value={release_date}/>
+                <input type="text" value={release_date} onChange={(event) => setReleaseDate(event.target.value)}/>
             </div>
+            <button type='submit'>Add</button>
         </form>
      );
 }
