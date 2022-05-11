@@ -13,8 +13,8 @@ const AddNewSongForm = (props) => {
             title: title,
             artist: artist,
             album: album,
-            genre: genre,
-            release_date: release_date
+            release_date: release_date,
+            genre: genre
         };
         console.log(newSong)
         props.addNewSongProperty(newSong)

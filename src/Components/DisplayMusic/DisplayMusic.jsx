@@ -3,7 +3,7 @@ import React from "react";
 const DisplayMusic = (props) => {
 
     return ( 
-        <table>
+        <table className='table'>
             <thead>
                 <tr>
                     <th>Title</th>
