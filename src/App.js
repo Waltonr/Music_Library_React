@@ -52,13 +52,19 @@ function App() {
       <div className='row'>
         <div className='col-md-6'>
           <div className='border-box'>
-          <h1>Music Library</h1>
-          <SearchBar searching={searchTerm} />
-          <DisplayMusic allTheSongs={songs} />
+            <div className='ml-sb'>
+              <h1>Music Library</h1>
+            </div>
+            <div className='ml-sb'>
+              <SearchBar searching={searchTerm} />
+            </div>
+            <DisplayMusic allTheSongs={songs} />
           </div>
         </div>
         <div className='col-md-6'>
-      <AddNewSongForm addNewSongProperty={addNewSong} />
+          <div className='border-box2'>
+            <AddNewSongForm addNewSongProperty={addNewSong} />
+          </div>
         </div>
       </div>
     </div>

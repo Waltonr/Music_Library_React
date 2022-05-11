@@ -1,6 +1,19 @@
 .border-box{
-    border: 1px;
+    border: 5px;
     border-style: double;
     border-color: black;
-    border-bottom-color: blue;
+    padding: 2em;
+    margin: 5em;
+}
+
+.border-box2 {
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    margin: 5em;
+    padding: 2em;
+}
+
+.ml-sb {
+    padding-left: 4em;
 }
